@@ -2,9 +2,15 @@
 
 /*tirei a margin padrão do body*/
 
+
 body {
     margin: 0;
     font-family: 'noto sans',sans-serif;
+}
+
+/* todo elemento do meu site terá box-sizing:border=box*/
+body * {
+    box-sizing: border-box;
 }
 
 /* section main */
@@ -48,7 +54,7 @@ body {
 
 /* section card-login */
 .card-login {
-    width: 60%;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -115,3 +121,39 @@ body {
     background: #ebc002;
     cursor: pointer;
 }
+
+/*tornando o site responsivél*/
+@media only screen and (max-width: 1028px) {
+    .card-login {
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .main-login {
+        flex-direction: column;
+    }
+
+    .left-login > h1 {
+        display: none;
+    } 
+
+
+    .left-login {
+        width: 100%;
+        height: auto;
+    }
+
+    .right-login {
+         width: 100%;
+         height: auto;
+    } 
+    .left-login-image {
+        width: 50vw;
+    } 
+    .card-login {
+
+    }  
+
+}
+    
